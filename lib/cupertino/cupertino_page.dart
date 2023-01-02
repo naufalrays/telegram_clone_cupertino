@@ -1,11 +1,7 @@
 import 'package:badges/badges.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/src/foundation/key.dart';
 import 'package:telegram/json/chat_json.dart';
-import 'package:telegram/widgets/drawer.dart';
-
-import '../json/chat_json.dart';
 
 class Cupertino extends StatefulWidget {
   const Cupertino({Key? key}) : super(key: key);
@@ -34,15 +30,15 @@ class _CupertinoState extends State<Cupertino> {
                 Padding(
                   padding: const EdgeInsets.only(right: 15.0),
                   child: CupertinoSearchTextField(
-                    prefixIcon: const Padding(
-                      padding: EdgeInsets.only(left: 130),
-                      child: Icon(
+                    prefixIcon: Padding(
+                      padding: EdgeInsets.only(left: size.width / 3.4),
+                      child: const Icon(
                         CupertinoIcons.search,
                         size: 20,
                       ),
                     ),
                     controller: TextEditingController(text: ''),
-                    placeholder: 'Search',
+                    placeholder: 'Search chats',
                   ),
                 ),
               ],
@@ -94,7 +90,7 @@ class _CupertinoState extends State<Cupertino> {
                           width: 12,
                         ),
                         Expanded(
-                          child: Container(
+                          child: SizedBox(
                             height: 70,
                             child: Column(
                               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -103,7 +99,7 @@ class _CupertinoState extends State<Cupertino> {
                                   mainAxisAlignment:
                                       MainAxisAlignment.spaceBetween,
                                   children: [
-                                    Container(
+                                    SizedBox(
                                       width: (size.width - 40) * 0.6,
                                       child: Text(
                                         chat_data[index]['name'],
@@ -124,7 +120,7 @@ class _CupertinoState extends State<Cupertino> {
                                 const SizedBox(
                                   height: 4,
                                 ),
-                                Container(
+                                SizedBox(
                                   width: (size.width - 40) * 1,
                                   child: Row(
                                     mainAxisAlignment:
@@ -156,7 +152,7 @@ class _CupertinoState extends State<Cupertino> {
                                     ],
                                   ),
                                 ),
-                                Divider(
+                                const Divider(
                                   height: 10,
                                 )
                               ],

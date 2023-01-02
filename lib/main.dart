@@ -1,12 +1,9 @@
-import 'dart:io';
-
 import 'package:flutter/cupertino.dart';
-import 'package:flutter/material.dart';
 import 'package:telegram/cupertino/cupertino_home.dart';
-import 'package:telegram/home.dart';
 
 void main() {
   runApp(const CupertinoApp(
+    debugShowCheckedModeBanner: false,
     home: MyApp(),
   ));
 }

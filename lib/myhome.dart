@@ -51,11 +51,11 @@ class _MyHomeState extends State<MyHome> {
               return ListTile(
                 title: Text(
                   chat_data[index]['name'],
-                  style: TextStyle(fontSize: 22.0, color: Colors.black),
+                  style: const TextStyle(fontSize: 22.0, color: Colors.black),
                 ),
                 subtitle: Text(
                   chat_data[index]['text'],
-                  style: TextStyle(color: Colors.black),
+                  style: const TextStyle(color: Colors.black),
                 ),
                 leading: Row(
                   mainAxisSize: MainAxisSize.min,
@@ -110,7 +110,7 @@ class _MyHomeState extends State<MyHome> {
             ListView(padding: const EdgeInsets.only(top: 0), children: <Widget>[
           // ignore: prefer_const_constructors
           UserAccountsDrawerHeader(
-            decoration: BoxDecoration(color: Colors.blue),
+            decoration: const BoxDecoration(color: Colors.blue),
             accountName: const Text(
               "Adityo Rahman",
               style: TextStyle(
